@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import 'package:provider/provider.dart';
 import '../model/counter_model.dart';
+import 'components/function_btn.dart';
 
 class FunctionsView extends StatelessWidget {
   const FunctionsView({Key? key}) : super(key: key);
@@ -40,14 +41,13 @@ class FunctionsView extends StatelessWidget {
             ),
           ),
         ),
-
       ),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(width: 200,
+            Container(
+              width: 200,
               child: NeumorphicText(
                 'Contador: ${counter.counter}',
                 style: NeumorphicStyle(
@@ -68,73 +68,20 @@ class FunctionsView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: NeumorphicButton(
+                    child: NeumorphicActionButton(
+                      buttonText: 'Incrementar',
                       onPressed: counter.increment,
-                      style: NeumorphicStyle(
-                        color: Colors.grey[300]!,
-                        depth: 5,
-                        intensity: 0.8,
-                        surfaceIntensity: 0.4,
-                        boxShape: NeumorphicBoxShape.roundRect(
-                          BorderRadius.circular(20)
-                        ),
-                        shadowLightColor: Colors.white,
-                        shadowDarkColor: Color.fromARGB(255, 101, 99, 99),
-                        shape: NeumorphicShape.convex,
-                      ),
-                      padding: EdgeInsets.symmetric(vertical: 15),
-                      child: Container(
-                        height: 60,
-                        child: Center(
-                          child: Text(
-                            'Incrementar',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black.withOpacity(0.7),
-                            ),
-                          ),
-                        ),
-                      ),
                     ),
                   ),
                   const SizedBox(width: 20),
                   Expanded(
-                    child: NeumorphicButton(
+                    child: NeumorphicActionButton(
+                      buttonText: 'Decrementar',
                       onPressed: counter.decrement,
-                      style: NeumorphicStyle(
-                        color: Colors.grey[300]!,
-                        depth: 5,
-                        intensity: 0.8,
-                        surfaceIntensity: 0.8,
-                        boxShape: NeumorphicBoxShape.roundRect(
-                            BorderRadius.circular(20)
-                        ),
-                        shadowLightColor: Colors.white,
-                        shadowDarkColor: Color.fromARGB(255, 101, 99, 99),
-                        shape: NeumorphicShape.convex,
-                      ),
-                      padding: EdgeInsets.symmetric(vertical: 15),
-                      child: Container(
-                        height: 60,
-                        child: Center(
-                          child: Text(
-                            'Decrementar',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black.withOpacity(0.7),
-                            ),
-                          ),
-                        ),
-                      ),
                     ),
                   ),
                 ],
               ),
-
-
-
             ),
             const SizedBox(height: 40),
             NeumorphicText(
