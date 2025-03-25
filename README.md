@@ -28,10 +28,9 @@ Se você quer rodar esse app e ver a mágica acontecer no seu próprio dispositi
    ```bash
    git clone https://github.com/seu-usuario/flutter-provider-app.git
 
-cd flutter-provider-app
-flutter pub get
-flutter run
+ - cd flutter-provider-app
+ - flutter pub get
+ - flutter run
 
 
-## Agora está mais descontraído, com um toque de humor, mas ainda mantendo as informações necessárias. Se precisar de mais algum ajuste ou adicionar algo, é só me avisar! 😄
 
